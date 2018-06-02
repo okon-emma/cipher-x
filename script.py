@@ -5,7 +5,7 @@ import datetime
 
 count = 0
 now = str(datetime.datetime.now())
-soup = BeautifulSoup(open('vfl.html'), 'html.parser')
+soup = BeautifulSoup(open('data/vfl.html'), 'html.parser')
 weeks = soup.findAll('td', {'style':'width: 33%; text-align:center; background-color: #E1E3E6; padding: 7px'})
 
 f = open("data.csv", "w")
