@@ -13,6 +13,7 @@ for file in os.listdir(directory):
     result = df['result']
     home_col = df['home']
     away_col = df['away']
+    arg = filename[12:15]
     print(".." + filename)
 
     for r in range(3,38):
@@ -148,7 +149,11 @@ for file in os.listdir(directory):
         if sr == 3:
             s = '3'
 
-        f.write(s3 + "," + s2 + "," + s1 + "," + hodd(s_home, s_away) + "," + s + "\n")
+        #f.write(s3 + "," + s2 + "," + s1 + "," + hodd(s_home, s_away) + "," + s + "\n")
 
+        if arg == home:
+            f.write(s3 + "," + s2 + "," + s1 + "," + hodd(s_home, s_away) + "," + s + "\n")
+        if arg == away:
+            f.write(s3 + "," + s2 + "," + s1 + "," + aodd(s_home, s_away) + "," + s + "\n")
 
 f.close()
