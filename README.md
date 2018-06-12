@@ -2,7 +2,7 @@
 ML Sports Analytics
 
 ## Requirements
-1) Python3    
+1) Python 3.5.2
 2) Beautiful Soup 4 (pip install bs4==0.0.1)
 3) Pandas (pip install pandas==0.23.0)
 4) Numpy (pip install numpy==1.14.3)
