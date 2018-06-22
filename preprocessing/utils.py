@@ -67,7 +67,7 @@ def hodd(h,a):
     f = open('odd2.csv', 'r')
     for line in f:
         row = line.split(',')
-        if h in row[0] and a in row[0]:
+        if h in row[0][0:3] and a in row[0][3:6]:
             h_ = str(row[1])
             return(h_)
     f.close()
@@ -76,7 +76,7 @@ def dodd(h,a):
     f = open('odd2.csv', 'r')
     for line in f:
         row = line.split(',')
-        if h in row[0] and a in row[0]:
+        if h in row[0][0:3] and a in row[0][3:6]:
             d_ = str(row[2])
             return(d_)
     f.close()
@@ -85,7 +85,7 @@ def aodd(h,a):
     f = open('odd2.csv', 'r')
     for line in f:
         row = line.split(',')
-        if h in row[0] and a in row[0]:
+        if h in row[0][0:3] and a in row[0][3:6]:
             a_ = str(row[3])
             return(a_)
     f.close()

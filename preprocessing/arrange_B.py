@@ -3,8 +3,6 @@ import pandas as pd
 import os
 from utils import hodd, aodd
 
-f = open("train.csv", "w")
-f.write("r3,r2,r1,odd,class\n")
 
 groups = [
 'SOU','WAT','SWA','BRI','WBA',
@@ -36,15 +34,16 @@ for file in os.listdir(directory):
                     result = "1"
                 if result_col[r] == 3:
                     result = "3"
+
                 f.write(home_col[r] + "," + score_col[r] + "," + away_col[r] + "," + result + "\n")
                 #print(home_col[r], score_col[r], away_col[r], result_col[r])
             if away_col[r] == g:
                 if result_col[r] == 0:
-                    result = "0"
+                    result = "3"
                 if result_col[r] == 1:
                     result = "1"
                 if result_col[r] == 3:
-                    result = "3"
+                    result = "0"
                 f.write(home_col[r] + "," + score_col[r] + "," + away_col[r] + "," + result + "\n")
                 #print(home_col[r], score_col[r], away_col[r], result_col[r])
         f.close()
